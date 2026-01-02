@@ -1,0 +1,162 @@
+@charset 'utf-8';
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgba(79, 144, 241, 0.388);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    font-family: sans-serif;
+}
+
+.container {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.screen {
+    display: none;
+    padding: 2rem;
+    text-align: center;
+}
+
+.screen.active {
+    display: block;
+}
+
+#start-screen h1 {
+    color: rgb(97, 121, 255);
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+#start-screen p {
+    color: black;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+
+}
+
+.quiz-header {
+    margin-bottom: 1rem;
+}
+
+#question-text {
+    color: black;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.4rem;
+}
+
+.quiz-info {
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.answers-container {
+    display: flex;
+    font-display: column;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.answers-button {
+    background-color: #f8f0e5;
+    color: #333;
+    border: 2px solid #eadbc8;
+    border-radius: 10px;
+    padding: 1rem;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.answers-button:hover {
+    background-color: #eadbc8;
+    border-color: #dac0ae;
+}
+
+.answers-button.correct {
+    background-color: whitesmoke;
+    border-color: pink;
+    color: red;
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.progress {
+    height: 100%;
+    background-color: plum;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+#result-screen h1 {
+    color: black;
+    margin-bottom: 30px;
+}
+
+#result-info {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.result-info p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+#result-message {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
+    
+}
+
+button {
+    background-color:rgb(54, 134, 255);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+
+button:hover {
+    background-color: rgb(109, 119, 255);
+}
+
+@media (max-width:500px) {
+    .screen {
+        padding: 1rem;
+    }
+    #start-sreen h1 {
+        font-size: 2rem;
+    }
+
+}
